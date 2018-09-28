@@ -3,19 +3,27 @@ def main():
     myClass=(input("What grade are you in? - "))
 
     resultAnswer=yearInSchool(myClass)
-
+#sends the the information from yearInSchool up to main and down from main
     print('congrats you are a - '+ resultAnswer)
 
-    listofGrades=[86.5, 94.2, 100.0, 96.8]
-    (len(listofGrades))
-    answerGpa=getGpafunction(listofGrades)
+    listofGrades=[100.0, 70.5, 95.4, 85.9]
+    num=len(listofGrades)
+    answerGpa=getGpafunction(listofGrades,num)
+
+#gives a list and sends it down to Gpa function
+
+    print('my Gpa is ' + str(answerGpa))
 
 
-    resultGrade=calcAverageGrade(Grade)
+    letterGradeanswer=LetterGrade(answerGpa)
+#sends information down to letterGrade and back
+    print(letterGradeanswer)
 
-    print("grade - "+ resultGrade)
-
-
+    if (letterGradeanswer) == "A" or "B" or "C" or "D":
+        print('passing')
+    else:
+        print('falling')
+#prints if you are passing
 def yearInSchool(Class):
     if (Class) == '12':
         classResult="Senoir!"
@@ -33,33 +41,40 @@ def yearInSchool(Class):
         classResult="Your not in school."
 
     return classResult
-
+#returns what class you are
 #yearInSchool(enteredclass)
 
-def getGpafunction(listofGrades):
-    totalamount=(86.5+94.2+100.0+96.8)
-    gradeAverage=(totalamount/4)
+def getGpafunction(myGrades,myNum):
 
+
+    totalamount=myGrades[0]+myGrades[1]+myGrades[2]+myGrades[3]
+    gradeAverage=(totalamount/myNum)
+
+    return gradeAverage
     
-
+#gives you the average grades
 
 
 def LetterGrade(Grade):
-    if (Grade) < 90:
-        averageGrade= 'A, Great Job!'
+    if (Grade) > 90:
+        averageGrade= 'A'
 
-    elif (Grade) < 80:
-        averageGrade= "B, Good Work!"
+    elif (Grade) > 80:
+        averageGrade= "B"
 
-    elif (Grade) < 70:
-        averageGrade= "C, Ok!"
+    elif (Grade) > 70:
+        averageGrade= "C"
+
+    elif (Grade) >60:
+        averageGrade= "D"
 
     else:
-        averageGrade="Study more!"
+        averageGrade= "F"
+
 
     return averageGrade
 
-
+#gives you a letter number
 #calcAverageGrade(givenGrade)
 
 
