@@ -6,7 +6,7 @@ def main():
 #sends the the information from yearInSchool up to main and down from main
     print('congrats you are a - '+ resultAnswer)
 
-    listofGrades=[100.0, 70.5, 95.4, 85.9]
+    listofGrades=[100.0, 90.5, 90.4, 98.3]
     num=len(listofGrades)
     answerGpa=getGpafunction(listofGrades,num)
 
@@ -17,12 +17,26 @@ def main():
 
     letterGradeanswer=LetterGrade(answerGpa)
 #sends information down to letterGrade and back
-    print(letterGradeanswer)
+    print(("your current Letter Grade is a ") + str(letterGradeanswer))
 
-    if (letterGradeanswer) == "A" or "B" or "C" or "D":
-        print('passing')
+    if (letterGradeanswer) == "A":
+        print("Congrats you are passing")
+
+    elif (letterGradeanswer) == "B":
+        print("Congrats you are passing")
+
+    elif (letterGradeanswer) == "C":
+        print("Congrats you are passing")
+
+    elif (letterGradeanswer) == "D":
+        print("Congrats you are passing")
+
+    elif (letterGradeanswer) == "F":
+        print("Better get to work, you are falling")
+
     else:
-        print('falling')
+        print('you have no grade')
+
 #prints if you are passing
 def yearInSchool(Class):
     if (Class) == '12':
