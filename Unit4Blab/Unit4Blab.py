@@ -8,8 +8,9 @@ for i in range(0,5):
     print("pause")
 
 myList= [10,20,30,40,50]
+print(myList)
 
 for a in range(0, len(myList)):
-    list=(a *10)
-    myList.append(list)
+    list=[]
+    myList[a]=myList[a] *10
     print(myList)
