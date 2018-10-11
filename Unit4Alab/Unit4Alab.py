@@ -4,6 +4,10 @@ def main():
 
     print ("Your string without vowels is -" + deVowel(myString))
 
+
+
+
+
 def deVowel(myString):
     myString2 = myString
     myStringV = ""
@@ -13,6 +17,16 @@ def deVowel(myString):
 
     return (myStringV)
 
-
 main()
 
+def main2():
+    list = [1,2,3,4]
+    m=2
+    print(mathstuff(list, m))
+
+def mathstuff(list, m):
+    listf = []
+    for x in list:
+        listf.append(float(x) * float(m))
+    return(listf)
+main2()
