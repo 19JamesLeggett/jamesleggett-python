@@ -6,9 +6,17 @@ def main():
 #sends the the information from yearInSchool up to main and down from main
     print('congrats you are a - '+ resultAnswer)
 
-    listofGrades=[100.0, 90.5, 90.4, 98.3]
-    num=len(listofGrades)
-    answerGpa=getGpafunction(listofGrades,num)
+
+   # num1 = input('how many grades -')
+   # grades=[]
+    #for x in range(0,int(num1)):
+        #myGrades= input('grade')
+       # grades.insert(x, myGrades)
+       # print (grades)
+    myLists=[100,98, 48, 56]
+    print(len(myLists))
+    num=len(grades)
+    answerGpa=getGpafunction()
 
 #gives a list and sends it down to Gpa function
 
@@ -59,10 +67,11 @@ def yearInSchool(Class):
 #yearInSchool(enteredclass)
 
 def getGpafunction(myGrades,myNum):
-
-
-    totalamount=myGrades[0]+myGrades[1]+myGrades[2]+myGrades[3]
-    gradeAverage=(totalamount/myNum)
+     #gpa=sum(myGrades) / float(myNum)
+    gpa= float("0")
+    for x in myGrades:
+         gpa=float(gpa + (x))
+    gradeAverage = ((gpa) / len(myGrades))
 
     return gradeAverage
     
